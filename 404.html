@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Page Not Found | Everscribn</title>
+<meta name="robots" content="noindex, follow"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/components/site.css"/>
+<style>
+:root{--ink:#0b0c10;--ink-soft:#3c3d45;--ink-muted:#7b7c88;--bg:#f5f3ef;--white:#fff;--gold:#b8965a;--gold-lt:#d4b37a;--gold-pale:#f3ead8;--navy:#12274a;--navy-mid:#1c3d6e;--border:rgba(11,12,16,0.09);--r:6px;--max:1160px;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Outfit',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.7;font-size:16px;overflow-x:hidden}
+.btn{display:inline-block;padding:15px 36px;border-radius:var(--r);font-family:var(--sans);font-size:15px;font-weight:600;text-decoration:none;transition:all .2s;border:none}
+.btn-dark{background:var(--navy);color:#fff}
+.btn-dark:hover{background:var(--navy-mid);transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:#fff}
+.btn-gold:hover{background:var(--gold-lt);transform:translateY(-2px)}
+.error-wrap{background:var(--navy);min-height:calc(100vh - 70px);display:flex;align-items:center;position:relative;overflow:hidden}
+.error-wrap::before{content:'';position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1600&q=50&auto=format&fit=crop') center/cover no-repeat;opacity:.06}
+.error-inner{max-width:640px;margin:0 auto;padding:80px 40px;position:relative;z-index:1;text-align:center}
+.error-code{font-family:var(--serif);font-size:clamp(64px,12vw,140px);font-weight:700;color:var(--gold-lt);line-height:1;margin-bottom:8px}
+h1{font-family:var(--serif);font-size:clamp(28px,4vw,42px);font-weight:700;color:#fff;margin-bottom:18px;letter-spacing:-.5px}
+p{font-size:17px;font-weight:300;color:rgba(255,255,255,.72);line-height:1.8;margin-bottom:36px}
+.error-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+@media(max-width:600px){.error-inner{padding:56px 24px}}
+</style>
+</head>
+<body>
+
+<div id="site-nav"></div>
+
+<div class="error-wrap">
+<div class="error-inner">
+<div class="error-code">404</div>
+<h1>This Page Doesn't Exist.</h1>
+<p>The page you're looking for may have moved, been renamed, or never existed. Let's get you back to somewhere useful.</p>
+<div class="error-actions">
+<a href="/" class="btn btn-gold">Back to Homepage</a>
+<a href="/contact-us/" class="btn btn-dark">Get a Free Audit</a>
+</div>
+</div>
+</div>
+
+<div id="site-footer"></div>
+
+<script src="/components/include.js"></script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Page Speed and Core Web Vitals for Law Firm Websites | Everscribn</title>
+<meta name="description" content="A slow law firm website loses leads before they read a word. Here is what Core Web Vitals mean for law firm SEO and how to fix the most common issues."/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://www.everscribn.com/blog/law-firm-website-speed-seo/"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Page Speed and Core Web Vitals for Law Firm Websites | Everscribn"/>
+<meta property="og:url" content="https://www.everscribn.com/blog/law-firm-website-speed-seo/"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Page Speed and Core Web Vitals for Law Firm Websites","author":{"@type":"Organization","name":"Everscribn"},"publisher":{"@type":"Organization","name":"Everscribn","url":"https://www.everscribn.com"},"datePublished":"2025-06-01"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.everscribn.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.everscribn.com/blog/"},{"@type":"ListItem","position":3,"name":"Page Speed","item":"https://www.everscribn.com/blog/law-firm-website-speed-seo/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a good Core Web Vitals score for a law firm website?","acceptedAnswer":{"@type":"Answer","text":"Google defines good scores as LCP under 2.5 seconds, CLS below 0.1, and INP below 200 milliseconds. Most law firm websites built on heavy page builder themes with unoptimised images fail at least one of these thresholds, which creates a direct SEO and conversion disadvantage."}},{"@type":"Question","name":"Does page speed affect Google rankings for law firms?","acceptedAnswer":{"@type":"Answer","text":"Yes. Google uses Core Web Vitals as a ranking signal, which means two otherwise identical pages will not rank identically if one loads significantly slower than the other. The effect is most pronounced in competitive markets where many pages are closely matched on other signals."}},{"@type":"Question","name":"How do I test my law firm website speed?","acceptedAnswer":{"@type":"Answer","text":"Google PageSpeed Insights gives you a free score against all three Core Web Vitals on both mobile and desktop. Test your most important landing pages, not just your homepage, since scores can vary significantly between pages depending on images and embedded elements."}}]}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/components/site.css"/>
+<style>
+:root{--ink:#0b0c10;--ink-soft:#3c3d45;--ink-muted:#7b7c88;--bg:#f5f3ef;--white:#fff;--gold:#b8965a;--gold-lt:#d4b37a;--gold-pale:#f3ead8;--navy:#12274a;--navy-mid:#1c3d6e;--border:rgba(11,12,16,0.09);--r:6px;--max:1160px;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Outfit',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.7;font-size:16px}
+.hero-wrap{background:var(--navy);position:relative;overflow:hidden}
+.hero-wrap::before{content:'';position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&q=50&auto=format&fit=crop') center/cover no-repeat;opacity:.07}
+.hero{max-width:800px;margin:0 auto;padding:80px 40px 64px;position:relative;z-index:1}
+.breadcrumb{font-size:13px;color:rgba(255,255,255,.45);margin-bottom:24px}
+.breadcrumb a{color:rgba(255,255,255,.65);text-decoration:none}
+.blog-tag{display:inline-block;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold-lt);margin-bottom:14px}
+h1{font-family:var(--serif);font-size:clamp(36px,4.5vw,58px);font-weight:700;line-height:1.1;letter-spacing:-.8px;color:#fff;margin-bottom:20px}
+h1 em{font-style:italic;color:var(--gold-lt)}
+.hero-meta{font-size:13px;color:rgba(255,255,255,.45);margin-top:18px}
+.article-wrap{max-width:800px;margin:0 auto;padding:72px 40px}
+.article-wrap h2{font-family:var(--serif);font-size:clamp(26px,3vw,36px);font-weight:700;color:var(--ink);line-height:1.2;margin:48px 0 16px;letter-spacing:-.3px}
+.article-wrap h2 em{font-style:italic;color:var(--navy)}
+.article-wrap p{font-size:16px;color:var(--ink-soft);line-height:1.85;margin-bottom:20px;font-weight:300}
+.article-wrap ul{margin:16px 0 24px 20px}
+.article-wrap li{font-size:16px;color:var(--ink-soft);line-height:1.75;margin-bottom:8px;font-weight:300}
+.callout{background:var(--gold-pale);border-left:3px solid var(--gold);border-radius:0 var(--r) var(--r) 0;padding:20px 24px;margin:28px 0;font-size:15px;color:var(--ink-soft);font-weight:300}
+.callout strong{font-weight:600;color:var(--ink)}
+.metric-row{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:28px 0}
+.metric-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:20px;text-align:center}
+.metric-name{font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink-muted);margin-bottom:8px}
+.metric-val{font-family:var(--serif);font-size:28px;font-weight:700;color:var(--navy)}
+.metric-label{font-size:12px;color:var(--ink-muted);margin-top:4px}
+.metric-good{color:#15803d}
+.faq-bg{background:var(--bg);padding:72px 40px}
+.faq-container{max-width:800px;margin:0 auto}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.eyebrow::before{content:'';display:block;width:24px;height:1px;background:var(--gold)}
+h2.section-h{font-family:var(--serif);font-size:clamp(28px,3vw,40px);font-weight:700;color:var(--ink);line-height:1.15;margin-bottom:32px}
+h2.section-h em{font-style:italic;color:var(--navy)}
+details{border-bottom:1px solid var(--border)}
+details summary{font-family:var(--serif);font-size:18px;font-weight:700;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:'+';font-family:var(--sans);font-size:22px;font-weight:300;color:var(--gold);flex-shrink:0;transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+.faq-ans{font-size:14px;color:var(--ink-soft);font-weight:300;line-height:1.8;padding-bottom:20px;max-width:600px}
+.cta-band{background:var(--gold);padding:64px 40px;text-align:center}
+.cta-band h2{font-family:var(--serif);font-size:clamp(28px,3vw,40px);font-weight:700;color:#fff;margin-bottom:12px}
+.cta-band h2 em{font-style:italic;color:rgba(255,255,255,.75)}
+.cta-band p{font-size:16px;color:rgba(255,255,255,.8);max-width:480px;margin:0 auto 28px;font-weight:300}
+.btn{display:inline-block;padding:15px 36px;border-radius:var(--r);font-size:15px;font-weight:600;text-decoration:none;transition:all .2s}
+.btn-dark{background:var(--navy);color:#fff}
+.btn-dark:hover{background:var(--navy-mid);transform:translateY(-2px)}
+@media(max-width:600px){.article-wrap,.hero,.faq-bg{padding-left:24px;padding-right:24px}.metric-row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div id="site-nav"></div>
+
+<div class="hero-wrap">
+<div class="hero">
+<div class="breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / Page Speed</div>
+<div class="blog-tag">Technical SEO</div>
+<h1>Page Speed and Core Web Vitals<br/><em>for Law Firm Websites</em></h1>
+<div class="hero-meta">By Everscribn &nbsp;·&nbsp; June 2025 &nbsp;·&nbsp; 7 min read</div>
+</div>
+</div>
+
+<div class="article-wrap">
+
+<p>A slow law firm website is not just a frustrating user experience. It is a ranking disadvantage, a lead loss problem, and an intake issue all at once. Google uses Core Web Vitals as a ranking signal, which means your page speed directly affects where you appear in search results. And for legal clients searching on a mobile phone, often in a stressful moment, a slow page means they bounce to a faster competitor before they ever read your firm's name.</p>
+
+<h2>What Are Core<br/><em>Web Vitals?</em></h2>
+
+<p>Core Web Vitals are three specific page experience signals Google uses to measure real world loading performance, interactivity, and visual stability. They apply to every page on your website, not just the homepage.</p>
+
+<div class="metric-row">
+<div class="metric-card">
+<div class="metric-name">LCP</div>
+<div class="metric-val metric-good">&lt; 2.5s</div>
+<div class="metric-label">Largest Contentful Paint. How fast your main content loads.</div>
+</div>
+<div class="metric-card">
+<div class="metric-name">CLS</div>
+<div class="metric-val metric-good">&lt; 0.1</div>
+<div class="metric-label">Cumulative Layout Shift. How much elements jump around while loading.</div>
+</div>
+<div class="metric-card">
+<div class="metric-name">INP</div>
+<div class="metric-val metric-good">&lt; 200ms</div>
+<div class="metric-label">Interaction to Next Paint. How fast the page responds to clicks and taps.</div>
+</div>
+</div>
+
+<p>Most law firm websites built on heavy page builder themes with unoptimised images and multiple third party tracking scripts fail at least one of these thresholds, often significantly. A poor score on any of them creates both a direct SEO disadvantage and a measurable drop in the share of visitors who stay long enough to contact your firm.</p>
+
+<h2>How Page Speed Affects<br/><em>Law Firm Rankings</em></h2>
+
+<p>Google confirmed Core Web Vitals as a ranking factor in 2021 and has continued strengthening their weight in the algorithm since. The practical effect is that two law firm pages with similar content, backlinks, and on page SEO will not rank identically if one loads significantly faster than the other.</p>
+
+<p>In highly competitive markets, where many firms have invested heavily in content and links, page speed can be the tiebreaker. In markets where most competing firms have neglected technical SEO, a fast website creates a meaningful and sustainable advantage.</p>
+
+<div class="callout"><strong>Mobile first matters most:</strong> Google now indexes and ranks your website based on its mobile version, not desktop. A firm whose website looks great on a desktop but loads slowly on a 3G or 4G connection is being evaluated on its worst performing version.</div>
+
+<h2>The Most Common Law Firm<br/><em>Website Speed Problems</em></h2>
+
+<p>The same issues appear across most law firm websites that fail Core Web Vitals assessments. They are all fixable, but they require either a technically capable developer or a decision to rebuild on a faster framework.</p>
+
+<ul>
+<li>Unoptimised images uploaded at full resolution rather than compressed and served at the correct display size</li>
+<li>Heavy page builder plugins like Divi, Elementor, or Beaver Builder loading large CSS and JavaScript files even on pages that do not use them</li>
+<li>Multiple tracking scripts, chat widgets, and cookie banners loading simultaneously and blocking page render</li>
+<li>No caching or CDN in place, meaning every page request is served fresh from the origin server</li>
+<li>Large fonts loaded from Google Fonts or Adobe Fonts without preconnect hints, adding render blocking latency</li>
+</ul>
+
+<h2>Tools to Test Your<br/><em>Law Firm Website Speed</em></h2>
+
+<p>Google PageSpeed Insights gives you a free score against all three Core Web Vitals on both mobile and desktop, with specific recommendations for what to fix. You should test your most important landing pages individually, not just your homepage, since scores can vary significantly between pages depending on images and embedded elements.</p>
+
+<p>Google Search Console also shows aggregate Core Web Vitals data for your entire site over time, which helps you identify whether specific pages or page types are underperforming your overall average.</p>
+
+<p>For firms in markets where mobile speed is especially critical, including Lagos and any market where a significant share of searches happen on slower mobile connections, testing against a throttled connection in Chrome DevTools gives a more accurate picture of what actual users experience.</p>
+
+</div>
+
+<div class="faq-bg">
+<div class="faq-container">
+<span class="eyebrow">FAQ</span>
+<h2 class="section-h">Page Speed<br/><em>Questions Answered</em></h2>
+<details open>
+<summary>What is a good Core Web Vitals score for a law firm website?</summary>
+<p class="faq-ans">Google defines good scores as LCP under 2.5 seconds, CLS below 0.1, and INP below 200 milliseconds. Most law firm websites built on heavy page builder themes with unoptimised images fail at least one of these thresholds, which creates a direct SEO and conversion disadvantage.</p>
+</details>
+<details>
+<summary>Does page speed affect Google rankings for law firms?</summary>
+<p class="faq-ans">Yes. Google uses Core Web Vitals as a ranking signal, which means two otherwise identical pages will not rank identically if one loads significantly slower than the other. The effect is most pronounced in competitive markets where many pages are closely matched on other signals.</p>
+</details>
+<details>
+<summary>How do I test my law firm website speed?</summary>
+<p class="faq-ans">Google PageSpeed Insights gives you a free score against all three Core Web Vitals on both mobile and desktop. Test your most important landing pages, not just your homepage, since scores can vary significantly between pages depending on images and embedded elements.</p>
+</details>
+</div>
+</div>
+
+<section class="cta-band" aria-labelledby="cta-h">
+<div class="container">
+<h2 id="cta-h">Find Out How Your Site<br/><em>Scores on Core Web Vitals</em></h2>
+<p>We include a full page speed and technical SEO review in every free audit. Find out exactly what is slowing your firm down.</p>
+<a href="/contact-us/" class="btn btn-dark">Get My Free Audit</a>
+</div>
+</section>
+
+<div id="site-footer"></div>
+
+<script src="/components/include.js"></script>
+</body>
+</html>
