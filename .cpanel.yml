@@ -21,13 +21,13 @@ deployment:
     - /bin/cp -R faq $DEPLOYPATH
     - /bin/cp -R immigration-seo $DEPLOYPATH
     - /bin/cp -R index.html $DEPLOYPATH
-    - /bin/cp -R lagos-seo $DEPLOYPATH
     - /bin/cp -R locations $DEPLOYPATH
     - /bin/cp -R london-seo $DEPLOYPATH
     - /bin/cp -R melbourne-seo $DEPLOYPATH
     - /bin/cp -R personal-injury-seo $DEPLOYPATH
     - /bin/cp -R pricing $DEPLOYPATH
     - /bin/cp -R robots.txt $DEPLOYPATH
+    - /bin/cp -R seo-agency-for-law-firm-lagos $DEPLOYPATH
     - /bin/cp -R services $DEPLOYPATH
     - /bin/cp -R sitemap.xml $DEPLOYPATH
     - /bin/cp -R .htaccess $DEPLOYPATH

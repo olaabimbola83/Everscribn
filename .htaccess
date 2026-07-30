@@ -13,6 +13,9 @@ RewriteRule ^(.*)$ https://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 # Custom error pages
 ErrorDocument 404 /404.html
 
+# Redirect old Lagos SEO slug to the new one
+RewriteRule ^lagos-seo/?$ /seo-agency-for-law-firm-lagos/ [R=301,L]
+
 # Don't expose directory listings
 Options -Indexes
 
