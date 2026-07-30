@@ -4,6 +4,7 @@ deployment:
     - export DEPLOYPATH=/home/everllub/public_html/
     - /bin/cp -R 404.html $DEPLOYPATH
     - /bin/cp -R about $DEPLOYPATH
+    - /bin/cp -R assets $DEPLOYPATH
     - /bin/cp -R bankruptcy-seo $DEPLOYPATH
     - /bin/cp -R blog $DEPLOYPATH
     - /bin/cp -R business-law-seo $DEPLOYPATH
