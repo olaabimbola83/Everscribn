@@ -40,6 +40,7 @@ Options -Indexes
   ExpiresByType application/javascript "access plus 1 month"
   ExpiresByType image/png "access plus 1 year"
   ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
   ExpiresByType image/svg+xml "access plus 1 year"
   ExpiresByType image/x-icon "access plus 1 year"
 </IfModule>
