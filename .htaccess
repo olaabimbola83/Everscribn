@@ -16,6 +16,9 @@ ErrorDocument 404 /404.html
 # Redirect old Lagos SEO slug to the new one
 RewriteRule ^lagos-seo/?$ /seo-agency-for-law-firm-lagos/ [R=301,L]
 
+# Redirect old Delaware SEO slug to the new one
+RewriteRule ^delaware-seo/?$ /seo-agency-for-law-firms-delaware/ [R=301,L]
+
 # Don't expose directory listings
 Options -Indexes
 
