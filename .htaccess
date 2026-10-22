@@ -2,6 +2,10 @@
 
 RewriteEngine On
 
+# Block hidden files and folders (.git, .htaccess, .cpanel.yml ...)
+# .well-known stays open so SSL certificates can renew
+RewriteRule (^|/)\.(?!well-known(/|$)) - [F,L]
+
 # Force HTTPS
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
